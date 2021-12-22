@@ -9,7 +9,10 @@
 template <typename Key, typename Info>
 void removeAllElements(Ring<Key, Info>& r, const Key& k)
 {
-
+    for (auto a = r.begin(); a != r.end(); a++) {
+        if (a->key == k)
+            r.deleteElement(a);
+    }
 }
 
 #endif //LAB1_EXTERNALFUNCTIONS_H
